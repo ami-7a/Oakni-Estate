@@ -1,0 +1,220 @@
+
+.rooms{
+  margin: 10vh auto;
+  width: 80vw;
+}
+
+.room{
+  display: flex;
+  justify-content: space-around;
+  margin: 15vh auto;
+}
+
+.room li{
+  width: 30%;
+}
+
+/* 住所・物件情報 */
+.room .room-adress{
+  margin-top: 5vh;
+  line-height: 3.5vh;
+}
+
+.room .house-name{
+  font-size: 1.4rem;
+}
+
+.room .house-details{
+  margin-top: 3vh;
+  font-size: .8rem;
+}
+
+.room .vacancy{
+  font-size: 1rem;
+  color: #b99a00e0;
+  width: 35%;
+  margin: 2vh auto;
+}
+
+/* フレンズへのボタン */
+.btn a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transition: 0.3s;
+  width: 12vw;
+  height: 5vh;
+  margin: 5vh auto;
+  font-size: .8rem;
+}
+
+.btn a {
+	background-color: #ceb849ee;
+	border: 1px solid transparent;
+} 
+
+.btn a:hover {
+	color: #f1f0f0;
+  background-color:  #b99a00e0;
+}
+
+/* ボタン上、ズレたボックス */
+.btn a::before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: -5px;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: 1px solid #302c2579;
+}
+
+/* ボタン右、ライン */
+.btn a::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -0.8vw;
+	transform: translateY(-50%);
+	width: 1.8vw;
+	height: 1px;
+	background-color: #302c2579;
+}
+
+/* スライドショー写真 */
+.room .slide {
+	position:relative;
+	height: 47vh;
+  margin-left: -20vw;
+}
+
+.room .slide img {
+	position:absolute;
+	opacity:0;
+	transition:all 1s ease-in-out;
+	height:100%;
+	object-fit:cover;
+  box-shadow: 0 0 10px gray;
+}
+
+.room input{
+  display: none;
+}
+
+.room .slide02 img{
+  margin-left: 5vw;
+}
+
+
+/* その他物件情報 */
+
+.room-others{
+  margin: 20vh auto;
+}
+
+.room-others-title{
+  font-size: 1.1rem;
+  margin-top: 5vh;
+}
+
+.room-list{
+  margin: 5vh auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70vw;
+}
+
+.room-list li{
+  width: 25%;
+  background-color: #838f82ee;
+  color: #f1f0f0;
+  box-shadow: 0 3px 20px #838f82;
+  margin: 3%;
+  padding: 4% 4%;
+  line-height: 4.5vh;
+  font-size: 1rem;
+}
+
+.room-others-adress{
+  font-size: .7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:599px){
+  .rooms{
+    width: 100vw;
+  }
+  
+  .room{
+    flex-direction: column;
+    margin: 5vh auto;
+  }
+
+  .room-02{
+    flex-direction: column-reverse;
+    padding-top: 10vh;
+  }
+  
+  .room li{
+    width: 100vw;
+  }
+  
+  /* 住所・物件情報 */
+  .room .room-adress{
+    margin-top: -4vh;
+  }
+  
+  .room .house-name{
+    font-size: 1rem;
+  }
+  
+  /* フレンズへのボタン */
+  .btn a{
+    width: 50vw;
+  }
+
+  /* ボタン右、ライン */
+  .btn a::after {
+    right: -1vw;
+    width: 6vw;
+  }
+
+  /* スライドショー写真 */
+  .room .slide {
+    height: 28vh;
+    margin-left: -38vw;
+  }
+  
+  .room .slide02 img{
+    margin-left: 2vw;
+  }
+  
+  
+  /* その他物件情報 */
+  .room-list{
+    flex-direction: column;
+    width: 100vw;
+  }
+  
+  .room-list li{
+    width: 75%;
+    margin: 3% auto;
+    padding: 12% 7%;
+    line-height: 4vh;
+    font-size: .9rem;
+  }
+}
