@@ -134,7 +134,7 @@
 
 
 
-@media screen and (max-width:599px){
+@media screen and (max-width:1024px){
 
   .find-top{
     flex-direction: column;

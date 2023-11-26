@@ -1,129 +1,28 @@
-.form{
-  width: 65vw;
-  height: 70vh;
-  margin: 5vh auto 20vh;
-  display: flex;
-  text-align: left;
+.c-contact__wrapper {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
-/* 左写真 */
-.form-left{
-  width: 50%;
-}
-
-.form-left img{
-  height:  67vh;
-  object-fit: contain;
-}
-
-/* 右テキスト */
-.form-right{
-  width: 50%;
-  margin-left: 4vw;
-  margin-top: 1.5vh;
-}
-
-/* インプット3つ共通 */
-input{
-  width: 30vw;
-  border-bottom: 1px solid #1a1c1e;
-  margin: 3vh auto;
-}
-
-/* テキストエリア */
-textarea{
-  width: 30vw;
-  border-bottom: 1px solid #1a1c1e;
-  padding-top: 1vw;
-}
-
-.txt-area p{
-  margin-top: 2vh;
-}
-
-.sent-btn{
-  background-color: #838f82;
-  color: #fffefd;
+.c-contact__wrapper .c-mail__wrapper {
+  max-width: 600px;
   text-align: center;
-  border-radius: 25px;
-  padding: 2%;
-  width: 10vw;
-  margin: 3vh 0vw 0vh 10vw;
-  cursor: pointer;
+  margin: 40px auto;
+  -webkit-box-shadow: 0 6px 8px rgba(97, 95, 95, 0.051);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.0509803922);
+  border: 1px solid #657559;
+  border-radius: 5px;
+  padding: 20px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.sent-btn:hover{
-  background-color: #423a34;
-  transition: .5s;
+.c-contact__wrapper .c-mail__wrapper::after {
+  display: none;
 }
 
-/* オート入力した時の背景色調整 */
-input:-webkit-autofill {
-  box-shadow: 0 0 0 1000px whitesmoke inset;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:599px){
-
-  .form{
-    width: 90vw;
-    height: auto;
-    margin: 3vh auto 10vh;
-    flex-direction: column;
-  }
-  
-  /* 左写真 */
-  .form-left{
-    width: 90vw;
-  }
-  
-  .form-left img{
-    height:  50vh;
-    object-fit: cover;
-  }
-  
-  /* 右テキスト */
-  .form-right{
-    width: 70vw;
-    margin-left: 10vw;
-    margin-top: 1.5vh;
-  }
-  
-  /* インプット3つ共通 */
-  input{
-    width: 70vw;
-  }
-  
-  /* テキストエリア */
-  textarea{
-    width: 70vw;
-  }
-
-  .sent-btn{
-    padding: 4%;
-    width: 20vw;
-    margin: 5vh auto;
-  }
-  
-  
-  
+.c-contact__wrapper .c-mail__wrapper:hover {
+  background-color: #eaedec;
+  border: 2px solid #eaedec;
+  color: #332c26;
 }

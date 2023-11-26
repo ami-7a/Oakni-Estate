@@ -5,7 +5,7 @@ html{
 }
 
 body{
-  font-size: 0.9rem;
+  font-size: 14px;
   background-color: whitesmoke;
   color: #332c26;
   font-family: 'Ibarra Real Nova', serif;
@@ -217,9 +217,9 @@ li{
   font-size: .7rem;
 }    
 
-@media screen and (max-width:599px) {
+@media screen and (max-width:1024px) {
   body{
-    font-size: 0.8rem;
+    font-size: 12px;
   }
   
   /* サイトトップのロゴ */
@@ -659,7 +659,7 @@ h5{
   margin-bottom: 7vh;
 }
 
-@media screen and (max-width:599px){
+@media screen and (max-width:1024px){
 
   h2{
     font-size: 1.7rem;

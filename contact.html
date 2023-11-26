@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>オークニエステート：賃貸物件紹介</title>
+    <title>オークニエステート：お部屋さがし</title>
     <meta
       name="description"
       content="福岡でのお部屋探し、不動産仲介、ワークスペース探し、賃貸売買はオークニエステートにお任せください。福岡市中央区警固にオフィスを構える不動産です。どうぞお気軽に、ご相談ください。"
@@ -28,8 +28,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/ress.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/rooms.css" />
-    <link rel="stylesheet" href="css/find.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -89,52 +88,6 @@
           });
         }
       };
-    </script>
-
-    <!-- スライドショー１ -->
-    <script>
-      window.addEventListener("load", function () {
-        viewSlide(".slide img");
-      });
-      function viewSlide(className, slideNo = -1) {
-        let imgArray = document.querySelectorAll(className);
-        if (slideNo >= 0) {
-          //初回以外は現在のスライドを消す
-          imgArray[slideNo].style.opacity = 0;
-        }
-        slideNo++;
-        if (slideNo >= imgArray.length) {
-          slideNo = 0; //次のスライドがなければ最初のスライドへ戻る
-        }
-        imgArray[slideNo].style.opacity = 1;
-        let msec = document.getElementById("slide_speed").value;
-        setTimeout(function () {
-          viewSlide(className, slideNo);
-        }, msec);
-      }
-    </script>
-
-    <!-- スライドショー２ -->
-    <script>
-      window.addEventListener("load", function () {
-        viewSlide(".slide02 img");
-      });
-      function viewSlide(className, slideNo = -1) {
-        let imgArray = document.querySelectorAll(className);
-        if (slideNo >= 0) {
-          //初回以外は現在のスライドを消す
-          imgArray[slideNo].style.opacity = 0;
-        }
-        slideNo++;
-        if (slideNo >= imgArray.length) {
-          slideNo = 0; //次のスライドがなければ最初のスライドへ戻る
-        }
-        imgArray[slideNo].style.opacity = 1;
-        let msec = document.getElementById("slide_speed02").value;
-        setTimeout(function () {
-          viewSlide(className, slideNo);
-        }, msec);
-      }
     </script>
   </head>
   <body>
@@ -260,178 +213,34 @@
     </header>
 
     <main class="second-main effect-fade">
-      <h2>Room Details</h2>
-      <h3>賃貸物件情報</h3>
+      <!-- 共通h1・h2 -->
+      <h2>Contact</h2>
+      <h3>お問い合わせ</h3>
 
-      <section class="rooms effect-fade">
-        <!-- オークヒルズ歯科大 -->
-        <div class="room room-01">
-          <!-- 住所・物件情報 -->
-          <li class="room-adress">
-            <p class="house-name">オークヒルズ歯科大</p>
-            <p>814-0165 福岡市早良区次郎丸４-16-11</p>
-
-            <p class="house-details">
-              福岡歯科大学より徒歩5分<br />ワンルームロフト付き<br />インターネット無料
-            </p>
-
-            <p class="vacancy">入居者募集中</p>
-
-            <!-- フレンズへのボタン -->
-            <p class="btn">
-              <a
-                href="https://www.f-takken.com/freins/rent/houses/keyword/items?keyword=%E3%82%AA%E3%83%BC%E3%82%AF%E3%83%92%E3%83%AB%E3%82%BA%E6%AD%AF%E7%A7%91%E5%A4%A7&_token=fLTQOazPZ3T2HA7cIkEABxCpZ1PjdAM9b3WdpQu6"
-                >不動産情報へ</a
-              >
-            </p>
-          </li>
-
-          <!-- スライドショー写真 -->
-          <li class="slide">
-            <img src="rooms.img/sika-boys-room-01.jpg" alt="" />
-            <img src="rooms.img/sika-boys-room-02.jpg" alt="" />
-            <img src="rooms.img/sika-boys-room-03.jpg" alt="" />
-            <img src="rooms.img/sika-girls-room-01.jpg" alt="" />
-            <img src="rooms.img/sika-boys-room-01.jpg" alt="" />
-            <img src="rooms.img/sika-boys-room-02.jpg" alt="" />
-            <img src="rooms.img/sika-boys-room-03.jpg" alt="" />
-            <img src="rooms.img/sika-girls-room-01.jpg" alt="" />
-          </li>
-
-          <p>
-            <input
-              type="range"
-              id="slide_speed"
-              value="2000"
-              min="100"
-              max="10000"
-            />
+      <!-- トップ画像とテキスト -->
+      <section class="contact effect-fade">
+        <div class="c-contact__wrapper">
+          <p class="text-center">
+            必要事項を記載の上、こちらからメールでお問い合わせください。
           </p>
-        </div>
-
-        <!-- グリーンヒルズ有田 -->
-        <div class="room room-02 effect-fade">
-          <!-- スライドショー写真 -->
-          <li class="slide slide02">
-            <img src="rooms.img/arita-boys-room-04.jpg" alt="" />
-            <img src="rooms.img/arita-loft.jpg" alt="" />
-            <img src="rooms.img/arita-washroom.jpg" alt="" />
-            <img src="rooms.img/arita-white-kitchen.jpg" alt="" />
-          </li>
-
-          <p>
-            <input
-              type="range"
-              id="slide_speed02"
-              value="2000"
-              min="100"
-              max="10000"
-            />
-          </p>
-
-          <!-- 住所・物件情報 -->
-          <li class="room-adress effect-fade">
-            <p class="house-name">グリーンヒルズ有田</p>
-            <p>814-0033 福岡市早良区有田1-27-1</p>
-
-            <p class="house-details">
-              バス停徒歩１分<br />ワンルームロフト付<br />無料Wi-Fi JCOM
+          <a
+            href="mailto&#58;oak&#64;oakni-estate.co.jp?subject=%E3%82%AA%E3%83%BC%E3%82%AF%E3%83%8B%E3%82%A8%E3%82%B9%E3%83%86%E3%83%BC%E3%83%88%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&amp;body=%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%E3%82%92%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E4%B8%8A%E3%80%81%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84"
+            class="c-mail__wrapper"
+          >
+            <picture>
+              <img
+                class="icon-mail"
+                src="./img/icon-mail.svg"
+                alt="mail"
+                width="100"
+              />
+            </picture>
+            <p class="text-center c-mail__address">oak@oakni-estate.co.jp</p>
+            <p class="text-center c-mail__text">
+              こちらからメールでお問い合わせください。<br />
+              <small>(メーラーが開きます)</small>
             </p>
-
-            <p class="vacancy">入居者募集中</p>
-
-            <!-- フレンズへのボタン -->
-            <p class="btn" id="jump">
-              <a
-                href="https://www.f-takken.com/freins/rent/houses/keyword/items?keyword=%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%83%92%E3%83%AB%E3%82%BA%E6%9C%89%E7%94%B0&_token=fLTQOazPZ3T2HA7cIkEABxCpZ1PjdAM9b3WdpQu6"
-                >不動産情報へ</a
-              >
-            </p>
-          </li>
-        </div>
-      </section>
-
-      <!-- 必要書類 -->
-      <section class="find-flow effect-fade">
-        <li>
-          <div class="flow-img">
-            <img src="icons/PDF.png" alt="" />
-          </div>
-
-          <div class="flow-txt">
-            <p class="subject">必要書類</p>
-            <p class="contxt">
-              <a href="PDF/保証会社CASA個人申込書.pdf" target="_blank"
-                >・【代理店用】保証委託申込書_個人</a
-              >
-
-              <a href="PDF/保証会社CASA　法人専用申込書.pdf" target="_blank"
-                >・【代理店用】保証委託申込書_法人</a
-              >
-
-              <a
-                href="PDF/（タテ）個人情報取扱規程と信用情報取扱同意書_［2204-2］.pdf"
-                target="_blank"
-                >・個人情報取扱規程 _ 株式会社Casa</a
-              >
-
-              <a
-                href="PDF/入居申し込みに関する注意事項（仲介業者様）.pdf"
-                target="_blank"
-                >・入居申し込みに関する注意事項(仲介業者様)</a
-              >
-
-              <a
-                href="PDF/保証会社CASA　学生専用申込書.pdf"
-                target="bla
-            "
-                >・学生専用申込書_株式会社Case</a
-              >
-            </p>
-          </div>
-        </li>
-      </section>
-
-      <section class="room-others effect-fade">
-        <h4 class="room-others-title">その他管理物件</h4>
-        <div class="room-list">
-          <li>
-            <p>西新ビル</p>
-            <p class="room-others-adress">
-              814-0011<br />福岡市早良区高取1-1-53
-            </p>
-          </li>
-
-          <li>
-            <p>大濠ハイツ</p>
-            <p class="room-others-adress">
-              814-0044<br />福岡市中央区六本松3-16-28
-            </p>
-          </li>
-
-          <li>
-            <p>ラフィネス薬院イーストコート</p>
-            <p class="room-others-adress">
-              810-0014<br />福岡市中央区平尾1-6-23
-            </p>
-          </li>
-
-          <li>
-            <p>リトル中洲</p>
-            <p class="room-others-adress">
-              810-0801<br />福岡市博多区中州2-7-3
-            </p>
-          </li>
-
-          <li>
-            <p>グリーンヒルズ平尾</p>
-            <p class="room-others-adress">815-0083<br />福岡市南区高宮1-22-1</p>
-          </li>
-
-          <li>
-            <p>コーポ平和 A棟・B棟</p>
-            <p class="room-others-adress">819-0001<br />福岡市西区小戸3-7-12</p>
-          </li>
+          </a>
         </div>
       </section>
     </main>

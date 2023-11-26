@@ -90,9 +90,52 @@
   background:#eaedec;
 }
 
+/* 移転のお知らせメッセージのスタイル */
+.move .move-text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transition: 0.3s;
+  width: 40vw;
+  padding: 20px 5px;
+  margin: 10vh auto 0vh;
+  /* font-size: 1rem; */
+  background-color: #e2ca55ee;
+	border: 1px solid transparent;
+}
+
+.move a:hover {
+	color: #f1f0f0;
+  background-color:  #e2ca55ee;
+}
+/* ボタン上、ズレたボックス */
+.move a::before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: 1px solid #302c2579;
+}
+
+/* ボタン右、ライン */
+.move a::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -0.8vw;
+	transform: translateY(-50%);
+	width: 1.8vw;
+	height: 1px;
+	background-color: #302c2579;
+}
+
 /* CEOメッセージ（Company共通） */
 .message, .company{
-  margin: 30vh auto;
+  margin: 20vh auto;
 }
 
 h1{
@@ -196,12 +239,9 @@ h2{
   height: 3.5vh;
   margin-left: 16vw;
   font-size: .7rem;
-}
-
-.btn a {
-	background-color: #ceb849ee;
+  background-color: #ceb849ee;
 	border: 1px solid transparent;
-} 
+}
 
 .btn a:hover {
 	color: #f1f0f0;
@@ -244,7 +284,7 @@ h2{
 
 .tel{
   border-bottom: 1px dotted #302c2579;
-  width: 10%;
+  width: 13%;
   margin: 0 auto;
 }
 
@@ -252,7 +292,7 @@ h2{
 /*ニュースセクション*/
 .news{
   height: auto;
-  margin-top: 30vh;
+  margin-top: 25vh;
 }
 
 .newslist{
@@ -313,7 +353,6 @@ h2{
   position: absolute;
 }
 /* SNS */
-
 .sns-parent{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
@@ -379,7 +418,7 @@ h2{
 }
 
 
-@media screen and (max-width:599px){
+@media screen and (max-width:1024px){
 
   /* フェードインアニメーション */
 
@@ -392,9 +431,16 @@ h2{
     height: 90vh;
   }
 
+  /* 移転のお知らせメッセージのスタイル */
+  .move .move-text{
+    width: 85vw;
+    font-size: .9rem;
+    margin: 5vh auto 0vh;
+  }
+
   /* CEOメッセージ（Companyと共通） */
   .message, .company{
-    margin: 15vh auto;
+    margin: 10vh auto;
   }
   
   h1{
